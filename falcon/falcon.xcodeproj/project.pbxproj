@@ -6,30 +6,25 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		C7C4B1BE2E42B7B90003F203 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C4B1BD2E42B7B90003F203 /* AppDelegate.swift */; };
+		C7C4B1C02E42B7B90003F203 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C4B1BF2E42B7B90003F203 /* SceneDelegate.swift */; };
+		C7C4B1C22E42B7B90003F203 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C4B1C12E42B7B90003F203 /* ViewController.swift */; };
+		C7C4B1C52E42B7B90003F203 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7C4B1C32E42B7B90003F203 /* Main.storyboard */; };
+		C7C4B1C72E42B7BC0003F203 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7C4B1C62E42B7BC0003F203 /* Assets.xcassets */; };
+		C7C4B1CA2E42B7BC0003F203 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7C4B1C82E42B7BC0003F203 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		C7C4B1BA2E42B7B90003F203 /* falcon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = falcon.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7C4B1BD2E42B7B90003F203 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C7C4B1BF2E42B7B90003F203 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		C7C4B1C12E42B7B90003F203 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C7C4B1C42E42B7B90003F203 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C7C4B1C62E42B7BC0003F203 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C7C4B1C92E42B7BC0003F203 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C7C4B1CB2E42B7BC0003F203 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		C7C4B1CC2E42B7BC0003F203 /* Exceptions for "falcon" folder in "falcon" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = C7C4B1B92E42B7B90003F203 /* falcon */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		C7C4B1BC2E42B7B90003F203 /* falcon */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				C7C4B1CC2E42B7BC0003F203 /* Exceptions for "falcon" folder in "falcon" target */,
-			);
-			path = falcon;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		C7C4B1B72E42B7B90003F203 /* Frameworks */ = {
@@ -45,7 +40,9 @@
 		C7C4B1B12E42B7B90003F203 = {
 			isa = PBXGroup;
 			children = (
-				C7C4B1BC2E42B7B90003F203 /* falcon */,
+				C7C4B1D52E42BA0D0003F203 /* Resources */,
+				C7C4B1D32E42B9D00003F203 /* App */,
+				C7C4B1D22E42B82A0003F203 /* Sources */,
 				C7C4B1BB2E42B7B90003F203 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,6 +53,42 @@
 				C7C4B1BA2E42B7B90003F203 /* falcon.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		C7C4B1D22E42B82A0003F203 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				C7C4B1D62E42BA330003F203 /* Screens */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		C7C4B1D32E42B9D00003F203 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				C7C4B1BD2E42B7B90003F203 /* AppDelegate.swift */,
+				C7C4B1BF2E42B7B90003F203 /* SceneDelegate.swift */,
+				C7C4B1C82E42B7BC0003F203 /* LaunchScreen.storyboard */,
+				C7C4B1CB2E42B7BC0003F203 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		C7C4B1D52E42BA0D0003F203 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C7C4B1C62E42B7BC0003F203 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C7C4B1D62E42BA330003F203 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				C7C4B1C12E42B7B90003F203 /* ViewController.swift */,
+				C7C4B1C32E42B7B90003F203 /* Main.storyboard */,
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -72,9 +105,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				C7C4B1BC2E42B7B90003F203 /* falcon */,
 			);
 			name = falcon;
 			packageProductDependencies = (
@@ -122,6 +152,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7C4B1CA2E42B7BC0003F203 /* LaunchScreen.storyboard in Resources */,
+				C7C4B1C72E42B7BC0003F203 /* Assets.xcassets in Resources */,
+				C7C4B1C52E42B7B90003F203 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,10 +165,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7C4B1C22E42B7B90003F203 /* ViewController.swift in Sources */,
+				C7C4B1BE2E42B7B90003F203 /* AppDelegate.swift in Sources */,
+				C7C4B1C02E42B7B90003F203 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C7C4B1C32E42B7B90003F203 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C7C4B1C42E42B7B90003F203 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C7C4B1C82E42B7BC0003F203 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C7C4B1C92E42B7BC0003F203 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		C7C4B1CE2E42B7BC0003F203 /* Debug */ = {
@@ -147,7 +202,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = GR3N378FP5;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = falcon/Info.plist;
+				INFOPLIST_FILE = App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -162,7 +217,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -175,7 +230,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = GR3N378FP5;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = falcon/Info.plist;
+				INFOPLIST_FILE = App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -190,7 +245,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
