@@ -41,7 +41,11 @@ struct AppView: View {
                     )
             }
             .disabled(gameManager.authenticationState != .authenticated)
-            .padding(.vertical, 100)
+            .padding(.vertical, 50)
+
+            Text(gameManager.authenticationState.rawValue)
+                .font(.headline.weight(.semibold))
+                .foregroundStyle(.white)
         }
         .background(
             Image("backgroundImage")

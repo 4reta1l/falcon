@@ -10,7 +10,7 @@ import Foundation
 class GameManager: ObservableObject {
     @Published var inGame = false
     @Published var isGameOver = false
-    @Published var authenticationState = PlayerAuthState.authenticated
+    @Published var authenticationState = PlayerAuthState.authenticating
 
     @Published var score = 0
     @Published var remainingTime = 100
