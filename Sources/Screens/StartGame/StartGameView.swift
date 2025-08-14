@@ -14,13 +14,13 @@ struct StartGameView: View {
         VStack(spacing: 40) {
             HStack {
                 Text("Balance scale")
-                    .foregroundStyle(.white)
+                    .foregroundStyle(.black)
                     .font(.largeTitle.bold())
                     .padding(.horizontal, 20)
                     .padding(.vertical, 5)
-                    .background(Color.gray.opacity(0.7))
+                    .background(Color.yellow)
                     .cornerRadius(10)
-                    .scaleEffect(1.1)
+                    .scaleEffect(1.3)
             }
             .padding(.vertical, 30)
             Spacer()

@@ -14,11 +14,11 @@ struct GameOverView: View {
         VStack(spacing: 40) {
             HStack {
                 Text("Game Over")
-                    .foregroundStyle(.white)
+                    .foregroundStyle(.black)
                     .font(.largeTitle.bold())
                     .padding(.horizontal, 20)
                     .padding(.vertical, 5)
-                    .background(Color.gray.opacity(0.7))
+                    .background(Color.yellow)
                     .cornerRadius(10)
                     .scaleEffect(1.3)
             }
