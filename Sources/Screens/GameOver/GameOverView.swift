@@ -1,50 +1,47 @@
 //
-//  StartGameView.swift
+//  GameOverView.swift
 //  falcon
 //
-//  Created by Maksym Pyvovarov on 06/08/2025.
+//  Created by Maksym Pyvovarov on 14/08/2025.
 //
 
 import SwiftUI
 
-struct StartGameView: View {
+struct GameOverView: View {
     @ObservedObject var viewModel: GameManager
 
     var body: some View {
         VStack(spacing: 40) {
             HStack {
-                Text("Balance scale")
+                Text("Game Over")
                     .foregroundStyle(.white)
                     .font(.largeTitle.bold())
                     .padding(.horizontal, 20)
                     .padding(.vertical, 5)
                     .background(Color.gray.opacity(0.7))
                     .cornerRadius(10)
-                    .scaleEffect(1.1)
+                    .scaleEffect(1.3)
             }
             .padding(.vertical, 30)
             Spacer()
 
             Button {
-                // TODO: start matchmaking menu
+                // TODO: go back to menu
             } label: {
-                Text("PLAY")
+                Text("Go to menu")
                     .foregroundStyle(.white)
                     .font(.title.bold())
                     .padding(.vertical, 12)
-                    .padding(.horizontal, 50)
+                    .padding(.horizontal, 30)
                     .scaleEffect(1.05)
                     .background(
                         Capsule()
-                            .fill(viewModel.authenticationState == .authenticated
-                                  ? .green
-                                  : .gray.opacity(0.8))
+                            .fill(Color.green)
                     )
             }
             .disabled(viewModel.authenticationState != .authenticated)
             .padding(.vertical, 50)
-
-            Text(viewModel.authenticationState.rawValue)
+            Text("Your score: \(viewModel.score)")
                 .font(.headline.weight(.semibold))
                 .foregroundStyle(.white)
         }
@@ -59,3 +56,4 @@ struct StartGameView: View {
         )
     }
 }
+

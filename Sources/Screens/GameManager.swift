@@ -7,10 +7,10 @@
 
 import Foundation
 
-class StartGameViewModel: ObservableObject {
+class GameManager: ObservableObject {
     @Published var inGame = false
     @Published var isGameOver = false
-    @Published var authenticationState = PlayerAuthState.authenticating
+    @Published var authenticationState = PlayerAuthState.authenticated
 
     @Published var score = 0
     @Published var remainingTime = 100
