@@ -1,5 +1,5 @@
 //
-//  GameManager.swift
+//  StartGameViewModel.swift
 //  falcon
 //
 //  Created by Maksym Pyvovarov on 13/08/2025.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-class GameManager: ObservableObject {
+class StartGameViewModel: ObservableObject {
     @Published var inGame = false
     @Published var isGameOver = false
     @Published var authenticationState = PlayerAuthState.authenticating

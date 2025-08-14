@@ -1,5 +1,5 @@
 //
-//  AppView.swift
+//  StartGameView.swift
 //  falcon
 //
 //  Created by Maksym Pyvovarov on 06/08/2025.
@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct AppView: View {
-    @ObservedObject var gameManager: GameManager
+struct StartGameView: View {
+    @ObservedObject var viewModel: StartGameViewModel
 
     var body: some View {
         VStack(spacing: 40) {
@@ -35,15 +35,15 @@ struct AppView: View {
                     .scaleEffect(1.05)
                     .background(
                         Capsule()
-                            .fill(gameManager.authenticationState == .authenticated
+                            .fill(viewModel.authenticationState == .authenticated
                                   ? .blue
                                   : .gray.opacity(0.8))
                     )
             }
-            .disabled(gameManager.authenticationState != .authenticated)
+            .disabled(viewModel.authenticationState != .authenticated)
             .padding(.vertical, 50)
 
-            Text(gameManager.authenticationState.rawValue)
+            Text(viewModel.authenticationState.rawValue)
                 .font(.headline.weight(.semibold))
                 .foregroundStyle(.white)
         }
