@@ -27,8 +27,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             return
         }
         let window = UIWindow(windowScene: scene)
-        window.rootViewController = UIHostingController(rootView:
-        StartGameView(viewModel: GameManager()))
+        window.rootViewController = UIHostingController(rootView: AppView())
         self.window = window
         window.makeKeyAndVisible()
     }
