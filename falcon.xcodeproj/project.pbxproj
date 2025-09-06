@@ -8,19 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		C76A9A2B2E648EBF0023EF48 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76A9A2A2E648EBF0023EF48 /* AppView.swift */; };
+		C76A9A2D2E671F0C0023EF48 /* MatchManager+GKMatchmakerViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76A9A2C2E671F0C0023EF48 /* MatchManager+GKMatchmakerViewControllerDelegate.swift */; };
+		C76A9A2F2E67212F0023EF48 /* MatchManager+GKMatchDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76A9A2E2E67212F0023EF48 /* MatchManager+GKMatchDelegate.swift */; };
 		C7C4B1BE2E42B7B90003F203 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C4B1BD2E42B7B90003F203 /* AppDelegate.swift */; };
 		C7C4B1C02E42B7B90003F203 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C4B1BF2E42B7B90003F203 /* SceneDelegate.swift */; };
 		C7C4B1C22E42B7B90003F203 /* StartGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C4B1C12E42B7B90003F203 /* StartGameView.swift */; };
 		C7C4B1C72E42B7BC0003F203 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7C4B1C62E42B7BC0003F203 /* Assets.xcassets */; };
 		C7C4B1CA2E42B7BC0003F203 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7C4B1C82E42B7BC0003F203 /* LaunchScreen.storyboard */; };
 		C7FA2D512E4CF67D00F30889 /* PlayerAuthState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FA2D502E4CF67D00F30889 /* PlayerAuthState.swift */; };
-		C7FA2D542E4CF7B000F30889 /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FA2D532E4CF7B000F30889 /* GameManager.swift */; };
+		C7FA2D542E4CF7B000F30889 /* MatchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FA2D532E4CF7B000F30889 /* MatchManager.swift */; };
 		C7FA2D582E4E56F700F30889 /* GameOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FA2D572E4E56F700F30889 /* GameOverView.swift */; };
 		C7FA2D5B2E4FED3F00F30889 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FA2D5A2E4FED3F00F30889 /* GameView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C76A9A2A2E648EBF0023EF48 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
+		C76A9A2C2E671F0C0023EF48 /* MatchManager+GKMatchmakerViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MatchManager+GKMatchmakerViewControllerDelegate.swift"; sourceTree = "<group>"; };
+		C76A9A2E2E67212F0023EF48 /* MatchManager+GKMatchDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MatchManager+GKMatchDelegate.swift"; sourceTree = "<group>"; };
 		C7C4B1BA2E42B7B90003F203 /* falcon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = falcon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7C4B1BD2E42B7B90003F203 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C7C4B1BF2E42B7B90003F203 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -29,7 +33,7 @@
 		C7C4B1C92E42B7BC0003F203 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C7C4B1CB2E42B7BC0003F203 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C7FA2D502E4CF67D00F30889 /* PlayerAuthState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerAuthState.swift; sourceTree = "<group>"; };
-		C7FA2D532E4CF7B000F30889 /* GameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
+		C7FA2D532E4CF7B000F30889 /* MatchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchManager.swift; sourceTree = "<group>"; };
 		C7FA2D572E4E56F700F30889 /* GameOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverView.swift; sourceTree = "<group>"; };
 		C7FA2D5A2E4FED3F00F30889 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		C7FA2D5C2E50A67900F30889 /* falcon.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = falcon.entitlements; sourceTree = "<group>"; };
@@ -98,7 +102,9 @@
 				C7FA2D552E4E561D00F30889 /* StartGame */,
 				C7FA2D592E4FED1A00F30889 /* Game */,
 				C7FA2D562E4E56DF00F30889 /* GameOver */,
-				C7FA2D532E4CF7B000F30889 /* GameManager.swift */,
+				C7FA2D532E4CF7B000F30889 /* MatchManager.swift */,
+				C76A9A2E2E67212F0023EF48 /* MatchManager+GKMatchDelegate.swift */,
+				C76A9A2C2E671F0C0023EF48 /* MatchManager+GKMatchmakerViewControllerDelegate.swift */,
 				C7FA2D502E4CF67D00F30889 /* PlayerAuthState.swift */,
 				C76A9A2A2E648EBF0023EF48 /* AppView.swift */,
 			);
@@ -204,11 +210,13 @@
 			files = (
 				C7FA2D512E4CF67D00F30889 /* PlayerAuthState.swift in Sources */,
 				C7C4B1C22E42B7B90003F203 /* StartGameView.swift in Sources */,
+				C76A9A2F2E67212F0023EF48 /* MatchManager+GKMatchDelegate.swift in Sources */,
+				C76A9A2D2E671F0C0023EF48 /* MatchManager+GKMatchmakerViewControllerDelegate.swift in Sources */,
 				C7C4B1BE2E42B7B90003F203 /* AppDelegate.swift in Sources */,
 				C7C4B1C02E42B7B90003F203 /* SceneDelegate.swift in Sources */,
 				C76A9A2B2E648EBF0023EF48 /* AppView.swift in Sources */,
 				C7FA2D582E4E56F700F30889 /* GameOverView.swift in Sources */,
-				C7FA2D542E4CF7B000F30889 /* GameManager.swift in Sources */,
+				C7FA2D542E4CF7B000F30889 /* MatchManager.swift in Sources */,
 				C7FA2D5B2E4FED3F00F30889 /* GameView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

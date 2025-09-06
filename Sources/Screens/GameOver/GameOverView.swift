@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct GameOverView: View {
-    @ObservedObject var viewModel: GameManager
+    @ObservedObject var viewModel: MatchManager
 
     var body: some View {
         VStack(spacing: 40) {

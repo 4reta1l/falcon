@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct StartGameView: View {
-    @ObservedObject var viewModel: GameManager
+    @ObservedObject var viewModel: MatchManager
 
     var body: some View {
         VStack(spacing: 40) {
@@ -26,7 +26,7 @@ struct StartGameView: View {
             Spacer()
 
             Button {
-                // TODO: start matchmaking menu
+                viewModel.startMatchmaking()
             } label: {
                 Text("PLAY")
                     .foregroundStyle(.white)

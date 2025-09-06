@@ -8,7 +8,7 @@
 import Foundation
 import GameKit
 
-class MatchManager: ObservableObject {
+class MatchManager: NSObject, ObservableObject {
     @Published var inGame = false
     @Published var isGameOver = false
     @Published var authenticationState = PlayerAuthState.authenticated
@@ -17,16 +17,18 @@ class MatchManager: ObservableObject {
     @Published var remainingTime: Int = 100
 
     var match: GKMatch?
-    var players: [GKPlayer] = []
     var localPlayer = GKLocalPlayer.local
+    var otherPlayers: [GKPlayer] = []
+    var allPlayers: [GKPlayer] = []
 
-    init() {
-        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
-            if self.remainingTime > 0 {
-                self.remainingTime -= 1
-            }
-        }
-    }
+
+//    init() {
+//        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
+//            if self.remainingTime > 0 {
+//                self.remainingTime -= 1
+//            }
+//        }
+//    }
 
     var rootViewController: UIViewController? {
         let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene
@@ -66,6 +68,14 @@ class MatchManager: ObservableObject {
         let matchmakingVC = GKMatchmakerViewController(matchRequest: request)
         matchmakingVC?.matchmakerDelegate = self
 
-        rootViewController?.present(matchmakingVC, animated: true)
+        //TODO: avoid force unwrappppp
+        rootViewController?.present(matchmakingVC!, animated: true)
+    }
+
+    func startMatch(newMatch: GKMatch) {
+        self.match = newMatch
+        self.match?.delegate = self
+        self.otherPlayers = (match?.players)!
+        self.allPlayers = otherPlayers + [localPlayer]
     }
 }

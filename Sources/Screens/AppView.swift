@@ -8,17 +8,11 @@
 import SwiftUI
 
 struct AppView: View {
-    @StateObject var gameManager = GameManager()
+    @StateObject var gameManager = MatchManager()
 
     var body: some View {
         ZStack {
-            if gameManager.isGameOver {
-                GameOverView(viewModel: gameManager)
-            } else if gameManager.inGame {
-                GameView(viewModel: gameManager)
-            } else {
-                StartGameView(viewModel: gameManager)
-            }
+            GameView(viewModel: gameManager)
         }
         .onAppear {
             gameManager.authenticateUser()

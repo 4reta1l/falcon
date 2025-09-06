@@ -9,7 +9,8 @@ import SwiftUI
 
 struct GameView: View {
 
-    @ObservedObject var viewModel: GameManager
+    @ObservedObject var viewModel: MatchManager
+    @State private var selectedNumber: Int?
 
     var body: some View {
         NavigationStack {
