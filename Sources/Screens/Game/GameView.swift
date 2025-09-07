@@ -12,12 +12,41 @@ struct GameView: View {
     @ObservedObject var viewModel: MatchManager
     @State private var selectedNumber: Int?
 
+    let columns = Array(repeating: GridItem(.flexible()), count: 10)
+
     var body: some View {
         NavigationStack {
-            Text("yo")
-                .toolbar {
-                    toolbarView
+            VStack(spacing: 20) {
+                Text(selectedNumber == nil ? "Select number" : "Selected number:")
+                    .font(.system(size: 24, weight: .medium))
+                    .bold()
+                Spacer()
+                Text(selectedNumber != nil ? "\(selectedNumber!)" : "")
+                    .frame(width: 300, height: 15)
+                    .font(.system(size: 128, weight: .medium))
+                    .bold()
+                Spacer()
+                LazyVGrid(columns: columns, spacing: 12) {
+                    ForEach(1...100, id: \.self) { number in
+                        Button(action: {
+                            selectedNumber = number
+                        }) {
+                            Text("\(number)")
+                                .frame(width: 32, height: 32)
+                                .font(.system(size: 14, weight: .medium))
+                                .foregroundColor(selectedNumber == number ? .white : .primary)
+                                .background(
+                                    selectedNumber == number ? Color.blue : Color(.systemGray5)
+                                )
+                                .cornerRadius(6)
+                        }
+                    }
                 }
+                .padding()
+            }
+            .toolbar {
+                toolbarView
+            }
         }
     }
 

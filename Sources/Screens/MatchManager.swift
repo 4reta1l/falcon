@@ -14,7 +14,7 @@ class MatchManager: NSObject, ObservableObject {
     @Published var authenticationState = PlayerAuthState.authenticated
 
     @Published var score = 0
-    @Published var remainingTime: Int = 100
+    @Published var remainingTime: Int = 30
 
     var match: GKMatch?
     var localPlayer = GKLocalPlayer.local
